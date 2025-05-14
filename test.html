@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample HTML Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f4f4f4;
+    }
+    .container {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      font-size: 16px;
+      color: #666;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: calc(100% - 24px);
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome to My Page</h1>
+    <p>Enter your name and click one of the buttons to see a response.</p>
+
+    <input type="text" id="nameInput" placeholder="Enter your name">
+
+    <br><br>
+
+    <button onclick="sayHello()">Say Hello</button>
+    <button onclick="sayGoodbye()">Say Goodbye</button>
+
+    <p id="output"></p>
+  </div>
+
+  <script>
+    function sayHello() {
+      const name = document.getElementById('nameInput').value;
+      document.getElementById('output').textContent = `Hello, ${name || 'stranger'}! 👋`;
+    }
+
+    function sayGoodbye() {
+      const name = document.getElementById('nameInput').value;
+      document.getElementById('output').textContent = `Goodbye, ${name || 'friend'}! 👋`;
+    }
+  </script>
+
+</body>
+</html>
